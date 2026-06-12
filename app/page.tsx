@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const GOOGLE_SHEET_URL =
-  "https://script.google.com/macros/s/AKfycbyXx-Wh9p5eCbSsbEahNDBy9kYuzMi3jfhA7rYqZ-F5p0ztnOjZSrWuA_XIYn5DPd9jlw/exec";
-
 type MovingProduct = {
   id: number;
   name: string;
@@ -250,27 +247,6 @@ export default function HomePage() {
     seconds: 0,
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isRegistered, setIsRegistered] = useState(false);
-
-  const [utmData, setUtmData] = useState({
-    utmSource: "",
-    utmMedium: "",
-    utmCampaign: "",
-    pageUrl: "",
-  });
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-
-    setUtmData({
-      utmSource: params.get("utm_source") || "",
-      utmMedium: params.get("utm_medium") || "",
-      utmCampaign: params.get("utm_campaign") || "",
-      pageUrl: window.location.href,
-    });
-  }, []);
-
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -294,44 +270,6 @@ export default function HomePage() {
 
     return () => clearInterval(timer);
   }, [launchDate]);
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    setIsSubmitting(true);
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-
-    formData.append("source", "Sinzo Coming Soon Registration Form");
-    formData.append("utmSource", utmData.utmSource);
-    formData.append("utmMedium", utmData.utmMedium);
-    formData.append("utmCampaign", utmData.utmCampaign);
-    formData.append("pageUrl", utmData.pageUrl);
-
-    try {
-      await fetch(GOOGLE_SHEET_URL, {
-        method: "POST",
-        mode: "no-cors",
-        body: formData,
-      });
-
-      setIsRegistered(true);
-      form.reset();
-
-      if (typeof window !== "undefined" && "gtag" in window) {
-        // @ts-expect-error gtag is loaded from Google Analytics
-        window.gtag("event", "sinzo_registration", {
-          event_category: "lead",
-          event_label: "coming_soon_form",
-        });
-      }
-    } catch {
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
 
   const productRows = [
     {
@@ -418,21 +356,30 @@ export default function HomePage() {
             Sinzo
           </a>
 
-          <div className="flex gap-2 text-xs font-bold md:gap-3 md:text-sm">
+          <div className="flex flex-wrap justify-end gap-2 text-xs font-bold md:gap-3 md:text-sm">
             <a href="/" className="rounded-full bg-white/10 px-3 py-2 md:px-4">
               Home
             </a>
+
             <a
               href="/about"
               className="rounded-full bg-white/10 px-3 py-2 md:px-4"
             >
               About Us
             </a>
+
             <a
               href="/policy"
               className="rounded-full bg-white/10 px-3 py-2 md:px-4"
             >
               Policy
+            </a>
+
+            <a
+              href="/register"
+              className="rounded-full bg-yellow-400 px-3 py-2 font-black text-black md:px-4"
+            >
+              Registration
             </a>
           </div>
         </div>
@@ -540,7 +487,7 @@ export default function HomePage() {
 
             <div className="mt-7 flex flex-wrap justify-center gap-4 md:justify-start">
               <a
-                href="#register"
+                href="/register"
                 className="rounded-full bg-yellow-400 px-7 py-3 font-black text-black shadow-xl shadow-yellow-500/20 transition hover:scale-105 hover:bg-yellow-300 md:px-8 md:py-4"
               >
                 Register Now
@@ -572,161 +519,6 @@ export default function HomePage() {
                 </h3>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* REGISTRATION */}
-      <section id="register" className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-8 rounded-[45px] border border-yellow-400/30 bg-gradient-to-br from-white/10 to-white/5 p-6 md:grid-cols-[0.9fr_1.1fr] md:p-10">
-          <div className="flex flex-col justify-center">
-            <p className="text-sm font-black uppercase tracking-[0.3em] text-yellow-300">
-              Early Access Registration
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black md:text-6xl">
-              Register Before Launch
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-gray-300">
-              Join the Sinzo early access list and get launch updates, first-week
-              sale alerts and special offers.
-            </p>
-
-            <div className="mt-6 rounded-3xl border border-yellow-400/25 bg-black/40 p-5">
-              <p className="text-xl font-black text-yellow-300">
-                Your Registration Will Be Saved
-              </p>
-              <p className="mt-3 text-sm leading-7 text-gray-300">
-                Name, mobile number, email, country, interested category,
-                campaign source and page URL will be saved in your Sinzo Google
-                Sheet.
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded-[35px] border border-yellow-400/25 bg-black/55 p-5 md:p-7">
-            {isRegistered ? (
-              <div className="rounded-[28px] border border-green-400/35 bg-green-500/15 p-8 text-center">
-                <p className="text-5xl">✅</p>
-                <h3 className="mt-4 text-3xl font-black text-green-200">
-                  Registration Successful
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-green-100">
-                  Thank you for registering with Sinzo. We will notify you when
-                  we launch.
-                </p>
-
-                <button
-                  type="button"
-                  onClick={() => setIsRegistered(false)}
-                  className="mt-6 rounded-full bg-white px-6 py-3 font-black text-black"
-                >
-                  Register Another Person
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="grid gap-4">
-                <div className="grid gap-4 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-black text-yellow-200">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      name="fullName"
-                      required
-                      placeholder="Enter your name"
-                      className="w-full rounded-2xl border border-yellow-400/20 bg-white px-4 py-3 text-sm font-semibold text-black outline-none focus:border-yellow-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-sm font-black text-yellow-200">
-                      Mobile Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="mobileNumber"
-                      required
-                      placeholder="Enter mobile number"
-                      className="w-full rounded-2xl border border-yellow-400/20 bg-white px-4 py-3 text-sm font-semibold text-black outline-none focus:border-yellow-400"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-black text-yellow-200">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      name="emailAddress"
-                      required
-                      placeholder="Enter email address"
-                      className="w-full rounded-2xl border border-yellow-400/20 bg-white px-4 py-3 text-sm font-semibold text-black outline-none focus:border-yellow-400"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="mb-2 block text-sm font-black text-yellow-200">
-                      Country
-                    </label>
-                    <select
-                      name="country"
-                      required
-                      className="w-full rounded-2xl border border-yellow-400/20 bg-white px-4 py-3 text-sm font-semibold text-black outline-none focus:border-yellow-400"
-                    >
-                      <option value="">Select country</option>
-                      <option value="India">India</option>
-                      <option value="UAE">UAE</option>
-                      <option value="Nepal">Nepal</option>
-                      <option value="US">US</option>
-                      <option value="UK">UK</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="mb-2 block text-sm font-black text-yellow-200">
-                    Interested Category
-                  </label>
-                  <select
-                    name="interestedCategory"
-                    required
-                    className="w-full rounded-2xl border border-yellow-400/20 bg-white px-4 py-3 text-sm font-semibold text-black outline-none focus:border-yellow-400"
-                  >
-                    <option value="">Select category</option>
-                    <option value="Fashion">Fashion</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Home & Kitchen">Home & Kitchen</option>
-                    <option value="Beauty">Beauty</option>
-                    <option value="Toys">Toys</option>
-                    <option value="Shoes">Shoes</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Mobile Accessories">
-                      Mobile Accessories
-                    </option>
-                    <option value="All Products">All Products</option>
-                  </select>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="mt-2 rounded-full bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 px-8 py-4 text-base font-black text-black shadow-xl shadow-yellow-500/20 transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-60"
-                >
-                  {isSubmitting ? "Registering..." : "Register Now"}
-                </button>
-
-                <p className="text-center text-xs leading-5 text-gray-400">
-                  By registering, you agree to receive Sinzo launch updates and
-                  early access offers.
-                </p>
-              </form>
-            )}
           </div>
         </div>
       </section>
