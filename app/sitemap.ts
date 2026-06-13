@@ -20,7 +20,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/why-sinzo`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/sinzo-ecommerce`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/about`,
