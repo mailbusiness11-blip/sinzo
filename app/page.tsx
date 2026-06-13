@@ -376,6 +376,34 @@ export default function HomePage() {
             </a>
 
             <a
+              href="/why-sinzo"
+              className="rounded-full bg-white/10 px-3 py-2 md:px-4"
+            >
+              Why Sinzo
+            </a>
+
+            <a
+              href="/sinzo-ecommerce"
+              className="rounded-full bg-white/10 px-3 py-2 md:px-4"
+            >
+              Sinzo E-Commerce
+            </a>
+
+            <a
+              href="/faq"
+              className="rounded-full bg-white/10 px-3 py-2 md:px-4"
+            >
+              FAQ
+            </a>
+
+            <a
+              href="/contact"
+              className="rounded-full bg-white/10 px-3 py-2 md:px-4"
+            >
+              Contact
+            </a>
+
+            <a
               href="/register"
               className="rounded-full bg-yellow-400 px-3 py-2 font-black text-black md:px-4"
             >
