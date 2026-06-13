@@ -351,12 +351,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.032)_1px,transparent_1px)] bg-[size:58px_58px]" />
         <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4">
           <a href="/" className="text-2xl font-black text-yellow-300 md:text-3xl">
             Sinzo
           </a>
 
-          <div className="flex flex-wrap justify-end gap-2 text-xs font-bold md:gap-3 md:text-sm">
+          <div className="flex max-w-full gap-2 overflow-x-auto whitespace-nowrap text-xs font-bold md:flex-wrap md:justify-end md:gap-3 md:text-sm">
             <a href="/" className="rounded-full bg-white/10 px-3 py-2 md:px-4">
               Home
             </a>
@@ -522,10 +522,10 @@ export default function HomePage() {
               </a>
 
               <a
-                href="/policy"
+                href="/why-sinzo"
                 className="rounded-full border border-yellow-400/50 bg-black/40 px-7 py-3 font-black text-yellow-300 transition hover:bg-yellow-400 hover:text-black md:px-8 md:py-4"
               >
-                View Policy
+                Why Sinzo
               </a>
             </div>
           </div>
