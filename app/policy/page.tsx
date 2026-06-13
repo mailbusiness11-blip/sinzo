@@ -1,198 +1,169 @@
 export default function PolicyPage() {
   return (
-    <main className="min-h-screen bg-[#030303] text-white">
-      <section className="relative overflow-hidden px-6 py-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.25),transparent_25%),radial-gradient(circle_at_90%_20%,rgba(249,115,22,0.20),transparent_25%),linear-gradient(135deg,#020202,#0f0f0f,#2a1400)]" />
-        <div className="absolute inset-0 bg-black/35" />
-
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between py-4">
+    <main className="min-h-screen bg-[#030303] px-5 py-6 text-white">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <a href="/" className="text-3xl font-black text-yellow-300">
             Sinzo
           </a>
 
-          <div className="flex gap-3 text-sm font-bold">
+          <div className="flex max-w-full gap-2 overflow-x-auto whitespace-nowrap text-sm font-bold md:flex-wrap md:justify-end">
             <a href="/" className="rounded-full bg-white/10 px-4 py-2">
               Home
             </a>
+
             <a href="/about" className="rounded-full bg-white/10 px-4 py-2">
               About Us
             </a>
+
+            <a href="/founder" className="rounded-full bg-white/10 px-4 py-2">
+              Founder
+            </a>
+
+            <a href="/why-sinzo" className="rounded-full bg-white/10 px-4 py-2">
+              Why Sinzo
+            </a>
+
+            <a href="/sinzo-brand" className="rounded-full bg-white/10 px-4 py-2">
+              Sinzo Brand
+            </a>
+
+            <a href="/faq" className="rounded-full bg-white/10 px-4 py-2">
+              FAQ
+            </a>
+
+            <a href="/contact" className="rounded-full bg-white/10 px-4 py-2">
+              Contact
+            </a>
+
             <a href="/policy" className="rounded-full bg-yellow-400 px-4 py-2 text-black">
               Policy
             </a>
+
+            <a href="/register" className="rounded-full bg-white/10 px-4 py-2">
+              Registration
+            </a>
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl py-20">
-          <p className="text-sm font-black uppercase tracking-[0.4em] text-yellow-300">
-            Company Policy
-          </p>
+        <section className="grid gap-10 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <p className="inline-flex rounded-full border border-yellow-400/40 bg-yellow-400/10 px-5 py-2 text-xs font-black uppercase tracking-[0.25em] text-yellow-300">
+              Sinzo Policy
+            </p>
 
-          <h1 className="mt-5 text-5xl font-black leading-tight md:text-7xl">
-            Delivery, COD &{" "}
-            <span className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Return Policy
-            </span>
-          </h1>
+            <h1 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
+              Sinzo Policies For A Transparent Shopping Future
+            </h1>
 
-          <p className="mt-6 max-w-4xl text-xl leading-9 text-gray-300">
-            Sinzo is being built with a direct sourcing model. Our aim is to
-            bring products closer from factories and suppliers to Indian
-            customers by reducing unnecessary middle layers.
-          </p>
-        </div>
-      </section>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Sinzo is currently in coming soon stage. Our policy page explains
+              how early registration, launch communication, user information and
+              future shopping updates are planned to be handled.
+            </p>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="rounded-[45px] border border-yellow-400/30 bg-gradient-to-br from-white/10 via-white/5 to-orange-500/10 p-8 shadow-2xl md:p-12">
-          <div className="rounded-[35px] border border-yellow-400/30 bg-black/50 p-7">
-            <h2 className="text-3xl font-black text-yellow-300">
-              Cash on Delivery Available
-            </h2>
-
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Cash on Delivery, also known as COD, will be available for
-              eligible products and eligible serviceable locations. COD
-              availability may depend on product type, order value, delivery
-              location and logistics partner support.
+            <p className="mt-5 text-lg leading-8 text-gray-300">
+              As Sinzo moves closer to launch, detailed customer policies,
+              return rules, shipping details, payment safety and marketplace
+              terms will be published clearly on the official website.
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="rounded-[35px] border border-yellow-400/30 bg-black/50 p-7">
-              <h2 className="text-3xl font-black text-yellow-300">
-                Fast Delivery by Air
-              </h2>
+          <div className="rounded-[40px] border border-yellow-400/30 bg-white/10 p-4">
+            <img
+              src="/neelam-sinzo4.jpeg"
+              alt="Neelam Sharma founder of Sinzo building trust and transparent shopping policies"
+              className="h-[500px] w-full rounded-[30px] object-cover object-top"
+            />
 
-              <p className="mt-4 text-lg leading-8 text-gray-300">
-                In this option, Sinzo imports the product for the customer by
-                air shipment. This option is suitable for customers who want
-                faster delivery.
+            <div className="p-5 text-center">
+              <p className="text-sm font-black uppercase tracking-widest text-yellow-300">
+                Trust & Transparency
               </p>
-
-              <p className="mt-4 text-lg leading-8 text-gray-300">
-                The estimated delivery time for this option is usually around
-                7 to 10 days after order processing and dispatch.
-              </p>
-
-              <p className="mt-4 text-lg leading-8 text-gray-300">
-                Air freight charges are higher, so the product cost in this
-                option may be higher compared to sea shipment.
-              </p>
-            </div>
-
-            <div className="rounded-[35px] border border-orange-400/30 bg-black/50 p-7">
-              <h2 className="text-3xl font-black text-orange-300">
-                Economy Delivery by Sea
-              </h2>
-
-              <p className="mt-4 text-lg leading-8 text-gray-300">
-                In this option, Sinzo imports the product for the customer by
-                sea shipment. This option is suitable for customers who want a
-                lower price and can wait longer for delivery.
-              </p>
-
-              <p className="mt-4 text-lg leading-8 text-gray-300">
-                The estimated delivery time for this option is usually around
-                30 to 40 days.
-              </p>
-
-              <p className="mt-4 text-lg leading-8 text-gray-300">
-                Because sea freight is more economical than air freight, this
-                option may offer prices up to around 50% lower than the fast air
-                delivery option on selected products.
+              <h2 className="mt-2 text-3xl font-black">Neelam Sharma</h2>
+              <p className="mt-3 text-sm font-bold text-gray-300">
+                Founder of Sinzo — building a women-led e-commerce brand with
+                trust, public visibility and 67K+ followers.
               </p>
             </div>
           </div>
+        </section>
 
-          <div className="mt-8 rounded-[35px] border border-green-400/30 bg-black/50 p-7">
-            <h2 className="text-3xl font-black text-green-300">
-              Return Policy
+        <section className="grid gap-5">
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 md:p-8">
+            <h2 className="text-2xl font-black text-yellow-300">
+              1. Early Registration
             </h2>
-
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Sinzo will provide a return policy for eligible products. If a
-              customer wants to return a product, the buyer will need to pay the
-              applicable return logistics, courier or shipping charges, unless
-              the return is approved under a special case such as wrong product,
-              damaged product or any issue confirmed by Sinzo support.
-            </p>
-
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Returned products must be unused, undamaged, in original
-              condition, and with original packaging, tags, invoice and
-              accessories wherever applicable.
-            </p>
-
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              Final return approval will depend on product condition, product
-              category and Sinzo return verification.
+            <p className="mt-4 text-base leading-8 text-gray-300">
+              Users may register on Sinzo to receive launch updates, first-week
+              sale alerts and special launch bonus information. Registration
+              does not create any purchase obligation.
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-4">
-            {[
-              "COD Available",
-              "7–10 Days Air Delivery",
-              "30–40 Days Sea Delivery",
-              "Buyer Pays Return Logistics",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-yellow-400/20 bg-white/5 p-5 text-center"
-              >
-                <p className="font-black text-yellow-300">{item}</p>
-              </div>
-            ))}
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 md:p-8">
+            <h2 className="text-2xl font-black text-yellow-300">
+              2. User Information
+            </h2>
+            <p className="mt-4 text-base leading-8 text-gray-300">
+              Information submitted through Sinzo registration may be used to
+              contact users about official Sinzo launch updates, offers and
+              platform information.
+            </p>
           </div>
 
-          <p className="mt-8 text-sm leading-7 text-gray-400">
-            Note: Delivery timelines are estimated and may vary due to customs
-            clearance, international shipping conditions, supplier processing
-            time, logistics partner delays, holidays, weather conditions or
-            other operational reasons.
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 md:p-8">
+            <h2 className="text-2xl font-black text-yellow-300">
+              3. Launch Offers
+            </h2>
+            <p className="mt-4 text-base leading-8 text-gray-300">
+              Launch bonus information, first-week sale alerts and promotional
+              offers may be subject to final launch terms, product availability,
+              region and official Sinzo rules.
+            </p>
+          </div>
+
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 md:p-8">
+            <h2 className="text-2xl font-black text-yellow-300">
+              4. Future Shopping Policies
+            </h2>
+            <p className="mt-4 text-base leading-8 text-gray-300">
+              Detailed policies for orders, shipping, returns, refunds,
+              cancellations, payments and customer support will be published
+              before or during the official Sinzo shopping launch.
+            </p>
+          </div>
+
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 md:p-8">
+            <h2 className="text-2xl font-black text-yellow-300">
+              5. Official Information
+            </h2>
+            <p className="mt-4 text-base leading-8 text-gray-300">
+              The official website of Sinzo is www.sinzo.in. Users should rely
+              on the official Sinzo website and official social media profile
+              @sinzo.in for trusted brand updates.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-12 rounded-[36px] border border-yellow-400/30 bg-black/60 p-7 text-center md:p-10">
+          <h2 className="text-3xl font-black leading-tight md:text-5xl">
+            Register Safely On The Official Sinzo Website
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-gray-300">
+            Use only www.sinzo.in for official Sinzo launch registration and
+            updates.
           </p>
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20">
-        <div className="rounded-[45px] border border-yellow-400/30 bg-gradient-to-r from-yellow-500 to-orange-500 p-10 text-center text-black">
-          <h2 className="text-4xl font-black">Need Help?</h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-lg font-semibold">
-            For any enquiry about delivery, COD, return or products, contact
-            Sinzo anytime.
-          </p>
-
-          <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
-            <a
-              href="https://wa.me/918750511089"
-              target="_blank"
-              className="rounded-3xl bg-black p-6 text-white"
-            >
-              <p className="text-yellow-300">WhatsApp</p>
-              <h3 className="mt-2 text-2xl font-black">+91 87505 11089</h3>
-            </a>
-
-            <a
-              href="mailto:work@sinzo.in"
-              className="rounded-3xl bg-black p-6 text-white"
-            >
-              <p className="text-yellow-300">Email</p>
-              <h3 className="mt-2 text-2xl font-black">work@sinzo.in</h3>
-            </a>
-
-            <a
-              href="https://www.instagram.com/sinzo.in"
-              target="_blank"
-              className="rounded-3xl bg-black p-6 text-white"
-            >
-              <p className="text-yellow-300">Instagram</p>
-              <h3 className="mt-2 text-2xl font-black">@sinzo.in</h3>
-            </a>
-          </div>
-        </div>
-      </section>
+          <a
+            href="/register"
+            className="mt-8 inline-flex rounded-full bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 px-10 py-4 font-black text-black"
+          >
+            Register Now
+          </a>
+        </section>
+      </div>
     </main>
   );
 }

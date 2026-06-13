@@ -16,15 +16,16 @@ export default function AboutPage() {
               About Us
             </a>
 
+            <a href="/founder" className="rounded-full bg-white/10 px-4 py-2">
+              Founder
+            </a>
+
             <a href="/why-sinzo" className="rounded-full bg-white/10 px-4 py-2">
               Why Sinzo
             </a>
 
-            <a
-              href="/sinzo-ecommerce"
-              className="rounded-full bg-white/10 px-4 py-2"
-            >
-              Sinzo E-Commerce
+            <a href="/sinzo-brand" className="rounded-full bg-white/10 px-4 py-2">
+              Sinzo Brand
             </a>
 
             <a href="/faq" className="rounded-full bg-white/10 px-4 py-2">
@@ -60,24 +61,32 @@ export default function AboutPage() {
             <p className="mt-5 text-lg leading-8 text-gray-300">
               Our goal is to build a global e-commerce platform where customers
               can discover products across fashion, electronics, home, beauty,
-              toys, shoes, accessories and many more categories.
+              toys, shoes, accessories, mobile accessories, appliances and many
+              more categories.
             </p>
 
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="/register"
-                className="inline-flex rounded-full bg-yellow-400 px-8 py-4 font-black text-black"
+                className="rounded-full bg-yellow-400 px-8 py-4 font-black text-black"
               >
                 Register For Launch Updates
+              </a>
+
+              <a
+                href="/founder"
+                className="rounded-full border border-yellow-400/50 px-8 py-4 font-black text-yellow-300"
+              >
+                Meet Founder
               </a>
             </div>
           </div>
 
           <div className="rounded-[40px] border border-yellow-400/30 bg-white/10 p-4">
             <img
-              src="/founder-neelam-sharma.JPG"
-              alt="Founder Neelam Sharma of Sinzo"
-              className="h-[520px] w-full rounded-[30px] object-cover object-center"
+              src="/neelam-sinzo1.jpeg"
+              alt="Neelam Sharma founder of Sinzo women-led global e-commerce platform"
+              className="h-[520px] w-full rounded-[30px] object-cover object-top"
             />
 
             <div className="p-5 text-center">
@@ -85,6 +94,10 @@ export default function AboutPage() {
                 Founder
               </p>
               <h2 className="mt-2 text-3xl font-black">Neelam Sharma</h2>
+              <p className="mt-3 text-sm font-bold text-gray-300">
+                Founder of Sinzo — women-led global e-commerce vision with
+                public social media presence and 67K+ followers.
+              </p>
             </div>
           </div>
         </section>
@@ -102,8 +115,8 @@ export default function AboutPage() {
             <p>
               Sinzo was created with the vision to make online shopping more
               valuable for customers. Many products become expensive before they
-              reach buyers because of multiple middle layers, high selling
-              costs, reseller margins and platform fees.
+              reach buyers because of multiple middle layers, selling costs,
+              reseller margins and platform fees.
             </p>
 
             <p>
@@ -115,7 +128,9 @@ export default function AboutPage() {
 
             <p>
               Founder Neelam Sharma represents the Sinzo vision of building a
-              trusted, customer-focused and future-ready e-commerce platform.
+              trusted, customer-focused and future-ready e-commerce platform
+              with global exposure across India, UAE, Hong Kong, China and
+              international markets.
             </p>
           </div>
         </section>
