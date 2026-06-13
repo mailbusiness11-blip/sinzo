@@ -1,147 +1,159 @@
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#030303] text-white">
-      <section className="relative overflow-hidden px-6 py-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.25),transparent_25%),radial-gradient(circle_at_90%_20%,rgba(249,115,22,0.20),transparent_25%),linear-gradient(135deg,#020202,#0f0f0f,#2a1400)]" />
-        <div className="absolute inset-0 bg-black/35" />
-
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between py-4">
+    <main className="min-h-screen bg-[#030303] px-5 py-6 text-white">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <a href="/" className="text-3xl font-black text-yellow-300">
             Sinzo
           </a>
 
-          <div className="flex gap-3 text-sm font-bold">
+          <div className="flex max-w-full gap-2 overflow-x-auto whitespace-nowrap text-sm font-bold md:flex-wrap md:justify-end">
             <a href="/" className="rounded-full bg-white/10 px-4 py-2">
               Home
             </a>
+
             <a href="/about" className="rounded-full bg-yellow-400 px-4 py-2 text-black">
               About Us
             </a>
-            <a href="/policy" className="rounded-full bg-white/10 px-4 py-2">
-              Policy
+
+            <a href="/why-sinzo" className="rounded-full bg-white/10 px-4 py-2">
+              Why Sinzo
+            </a>
+
+            <a
+              href="/sinzo-ecommerce"
+              className="rounded-full bg-white/10 px-4 py-2"
+            >
+              Sinzo E-Commerce
+            </a>
+
+            <a href="/faq" className="rounded-full bg-white/10 px-4 py-2">
+              FAQ
+            </a>
+
+            <a href="/contact" className="rounded-full bg-white/10 px-4 py-2">
+              Contact
+            </a>
+
+            <a href="/register" className="rounded-full bg-white/10 px-4 py-2">
+              Registration
             </a>
           </div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl py-20">
-          <p className="text-sm font-black uppercase tracking-[0.4em] text-yellow-300">
-            About Us
-          </p>
-
-          <h1 className="mt-5 text-5xl font-black leading-tight md:text-7xl">
-            Introduction of{" "}
-            <span className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
-              Sinzo
-            </span>
-          </h1>
-
-          <p className="mt-6 max-w-4xl text-xl leading-9 text-gray-300">
-            Sinzo is an India-first e-commerce marketplace created with a clear
-            mission: to make online shopping more affordable, more direct, and
-            more powerful for Indian customers.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <div className="rounded-[45px] border border-yellow-400/30 bg-gradient-to-br from-white/10 via-white/5 to-yellow-500/10 p-8 shadow-2xl md:p-12">
-          <div className="space-y-6 text-lg leading-9 text-gray-300">
-            <p>
-              In the traditional shopping system, many extra costs are added
-              before a product reaches the customer. Importers, agents,
-              distributors, resellers, middlemen, and platform commissions
-              increase the final selling price. Because of this, customers often
-              pay much more than the real manufacturing cost of the product.
+        <section className="grid gap-10 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p className="inline-flex rounded-full border border-yellow-400/40 bg-yellow-400/10 px-5 py-2 text-xs font-black uppercase tracking-[0.25em] text-yellow-300">
+              About Sinzo
             </p>
 
-            <p>
-              Sinzo is being built to change this system. Our goal is to bypass
-              unnecessary middle layers and source products directly from
-              factories and manufacturers, especially from large manufacturing
-              hubs in China and other global supply markets.
+            <h1 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
+              Building A New E-Commerce Platform With A Factory Direct Vision
+            </h1>
+
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Sinzo is being created with a simple belief: online shopping
+              should give customers better choices, smarter prices and a direct
+              connection to a wide range of products.
             </p>
 
-            <p>
-              By buying closer to the factory source, Sinzo aims to reduce extra
-              margins, reduce platform fee pressure, and bring products to
-              Indian customers at more exciting and competitive prices.
+            <p className="mt-5 text-lg leading-8 text-gray-300">
+              Our goal is to build a global e-commerce platform where customers
+              can discover products across fashion, electronics, home, beauty,
+              toys, shoes, accessories and many more categories.
             </p>
 
-            <p>
-              We are preparing to bring millions of products across multiple
-              categories, including fashion, ladies western wear, inner
-              garments, artificial jewellery, beauty products, bags, shoes,
-              men’s clothing, watches, toys, electronics, mobile accessories,
-              earpods, kitchen ware, gaming products, TV, furniture, sports
-              products, books, digital games, hardware tools, baby products,
-              home care, appliances, automobile products and many more.
-            </p>
-
-            <p>
-              Sinzo is not just another online shopping platform. Sinzo is a new
-              shopping idea designed for customers who want better variety,
-              better prices, and a direct factory-to-home shopping experience.
-            </p>
-
-            <p>
-              Our vision is simple: connect manufacturers directly with Indian
-              customers and make global products more accessible for every home
-              in India.
-            </p>
-          </div>
-
-          <div className="mt-10 rounded-[35px] border border-yellow-400/30 bg-black/50 p-7">
-            <h2 className="text-3xl font-black text-yellow-300">
-              Factory Direct. India’s Smartest Price.
-            </h2>
-
-            <p className="mt-4 text-lg leading-8 text-gray-300">
-              With Sinzo, customers can expect a fresh e-commerce experience,
-              exciting launch offers, massive product variety, and a strong
-              focus on affordability. We are working to create a marketplace
-              where customers can discover more products, compare better
-              options, and shop with confidence.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-4">
-            {[
-              "Direct Factory Sourcing",
-              "Millions of Products",
-              "Better Prices",
-              "India-first Marketplace",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl border border-yellow-400/20 bg-white/5 p-5 text-center"
+            <div className="mt-8">
+              <a
+                href="/register"
+                className="inline-flex rounded-full bg-yellow-400 px-8 py-4 font-black text-black"
               >
-                <p className="font-black text-yellow-300">{item}</p>
-              </div>
-            ))}
+                Register For Launch Updates
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20">
-        <div className="rounded-[45px] border border-yellow-400/30 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 p-10 text-center text-black">
-          <h2 className="text-4xl font-black">
-            Sinzo is coming soon with a 7 Days Mega Launch Sale
+          <div className="rounded-[40px] border border-yellow-400/30 bg-white/10 p-4">
+            <img
+              src="/founder-neelam-sharma.JPG"
+              alt="Founder Neelam Sharma of Sinzo"
+              className="h-[520px] w-full rounded-[30px] object-cover object-center"
+            />
+
+            <div className="p-5 text-center">
+              <p className="text-sm font-black uppercase tracking-widest text-yellow-300">
+                Founder
+              </p>
+              <h2 className="mt-2 text-3xl font-black">Neelam Sharma</h2>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-[36px] border border-yellow-400/30 bg-white/10 p-7 md:p-10">
+          <p className="text-sm font-black uppercase tracking-[0.25em] text-yellow-300">
+            Our Founder Vision
+          </p>
+
+          <h2 className="mt-4 text-3xl font-black leading-tight md:text-5xl">
+            Why Sinzo Was Created
           </h2>
 
-          <p className="mx-auto mt-4 max-w-3xl text-lg font-extrabold leading-8">
-            Early customers will get special opening deals across many product
-            categories. Sinzo — millions of products, direct sourcing, better
-            prices, and a new way to shop online.
-          </p>
+          <div className="mt-6 space-y-5 text-base leading-8 text-gray-300">
+            <p>
+              Sinzo was created with the vision to make online shopping more
+              valuable for customers. Many products become expensive before they
+              reach buyers because of multiple middle layers, high selling
+              costs, reseller margins and platform fees.
+            </p>
 
-          <a
-            href="/"
-            className="mt-8 inline-block rounded-full bg-black px-8 py-4 font-black text-yellow-300"
-          >
-            Back to Home
-          </a>
-        </div>
-      </section>
+            <p>
+              Sinzo wants to work toward a smarter model where products can come
+              closer from manufacturers and suppliers to customers. The aim is
+              to create a platform that gives customers more choice, better
+              value and exciting launch offers.
+            </p>
+
+            <p>
+              Founder Neelam Sharma represents the Sinzo vision of building a
+              trusted, customer-focused and future-ready e-commerce platform.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 text-center">
+            <p className="text-4xl">🏭</p>
+            <h3 className="mt-4 text-2xl font-black text-yellow-300">
+              Factory Direct Vision
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-gray-300">
+              Sinzo wants to bring products closer from source to customers.
+            </p>
+          </div>
+
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 text-center">
+            <p className="text-4xl">🌍</p>
+            <h3 className="mt-4 text-2xl font-black text-yellow-300">
+              Global Platform
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-gray-300">
+              Sinzo is preparing for India, UAE, Nepal, US, UK and future
+              markets.
+            </p>
+          </div>
+
+          <div className="rounded-[30px] border border-yellow-400/25 bg-white/10 p-6 text-center">
+            <p className="text-4xl">🛒</p>
+            <h3 className="mt-4 text-2xl font-black text-yellow-300">
+              Millions Of Products
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-gray-300">
+              Fashion, electronics, home, beauty, toys, shoes and more are
+              coming soon.
+            </p>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
